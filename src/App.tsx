@@ -1,7 +1,14 @@
+import Home from "./components/Home";
+import "./index.css";
+import { createTheme, ThemeProvider } from "@mui/material";
+
 function App() {
+  const theme = createTheme({});
   return (
     <>
-      <h1>Spot Mix</h1>
+      <ThemeProvider theme={theme}>
+        <Home />
+      </ThemeProvider>
     </>
   );
 }
